@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Blob
   - Finger
+  - Modifier
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ public class Finger : MonoBehaviour
             return;
         }
 
-        if (other.gameObject.name.StartsWith("BlobSize"))
+        if (other.gameObject.CompareTag("Blob"))
         {
             SceneManager.LoadScene("End");
         }

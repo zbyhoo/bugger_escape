@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -10,36 +11,33 @@ namespace DefaultNamespace
         private float _scale = 1;
         private JellySprite _next;
         private JellySprite _current;
+        
+        private readonly HashSet<int> _modifiersCalled = new HashSet<int>();
 
         void Update()
         {
-            if (_next != null)
+            if (_next != null && _current != null)
             {
                 UpdateBlob();
                 _next = null;
             }
-            
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                ChangeBlob(1);
-            }
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                ChangeBlob(-1);
-            }
         }
 
-        private void ChangeBlob(int step)
+        public void ChangeBlob(int step, int modifierID)
         {
+            if (_modifiersCalled.Add(modifierID) == false)
+            {
+                return;
+            }
+            
             int nextIndex = _index + step;
             if (nextIndex < 0 || nextIndex >= _blobs.Length)
             {
                 return;
             }
-            
+
             _current = _blobs[_index];
-            _next = _blobs[_index + step];
+            _next = _blobs[nextIndex];
             _index = nextIndex;
             
             _next.transform.position = _current.transform.position;
@@ -60,7 +58,12 @@ namespace DefaultNamespace
 
         private void UpdateBlob()
         {
-            _next.transform.position = _current.transform.position; 
+            _next.transform.position = _current.transform.position;
+
+            if (_current.ReferencePoints == null)
+            {
+                return;
+            }
             
             for (int i = 0; i < _current.ReferencePoints.Count; i++)
             {
