@@ -11,7 +11,7 @@ namespace DefaultNamespace
         private float _scale = 1;
         private JellySprite _next;
         private JellySprite _current;
-        
+
         private readonly HashSet<int> _modifiersCalled = new HashSet<int>();
 
         void Start()

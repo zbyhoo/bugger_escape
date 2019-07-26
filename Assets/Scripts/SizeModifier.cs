@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class SizeModifier : MonoBehaviour
 {
-    [SerializeField] private BlobSizeSwitcher _switcher;
+    public BlobSizeSwitcher _switcher;
     [SerializeField] private int _modifier;
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.enabled == false)
