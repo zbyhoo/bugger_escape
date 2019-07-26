@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEditor;
 using UnityEngine;
 
@@ -23,5 +24,7 @@ public class CameraFollower : MonoBehaviour
     {
         Vector3 targetPosition = new Vector3(transform.position.x + _offset, _cameraTransform.position.y, _cameraTransform.position.z);
         _cameraTransform.position = Vector3.SmoothDamp(_cameraTransform.position, targetPosition, ref _velocity, _smoothTime);
+        
+        Scoring.SetDistance(transform.position.x);
     }
 }

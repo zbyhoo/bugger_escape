@@ -1,24 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
-using UnityEditor;
+using TMPro;
 using UnityEngine;
 
-[CanEditMultipleObjects]
-public class BlobGravitySwitch : MonoBehaviour
+public class PointsLabel : MonoBehaviour
 {
-    [SerializeField] private UnityJellySprite _body;
+    [SerializeField] private TextMeshProUGUI _label;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _body.SwitchGravity();
-        }
+        _label.text = Scoring.GetPoints().ToString();
     }
 }

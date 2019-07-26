@@ -5,7 +5,7 @@ namespace DefaultNamespace
 {
     public class BlobSizeSwitcher : MonoBehaviour
     {
-        [SerializeField] private JellySprite[] _blobs;
+        public JellySprite[] _blobs;
 
         private int _index = 0;
         private float _scale = 1;
@@ -14,6 +14,11 @@ namespace DefaultNamespace
         
         private readonly HashSet<int> _modifiersCalled = new HashSet<int>();
 
+        void Start()
+        {
+            Scoring.Start(_blobs[0].transform.position.x);
+        }
+        
         void Update()
         {
             if (_next != null && _current != null)
