@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
+[CanEditMultipleObjects]
 public class BlobGravitySwitch : MonoBehaviour
 {
     [SerializeField] private UnityJellySprite _body;

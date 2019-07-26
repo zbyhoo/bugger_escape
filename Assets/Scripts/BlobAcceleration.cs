@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
+[CanEditMultipleObjects]
 public class BlobAcceleration : MonoBehaviour
 {
     [SerializeField] private float _targetSpeed;
