@@ -1,55 +1,55 @@
 
 game_jam.png
-size: 512,512
+size: 2048,2048
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Finger_2
   rotate: false
-  xy: 361, 393
-  size: 135, 114
-  orig: 135, 114
+  xy: 1430, 1561
+  size: 541, 455
+  orig: 541, 455
   offset: 0, 0
   index: -1
 Finger_3
   rotate: false
-  xy: 498, 499
-  size: 11, 8
-  orig: 11, 8
+  xy: 1973, 1986
+  size: 45, 30
+  orig: 45, 30
   offset: 0, 0
   index: -1
 Finger_4
   rotate: false
-  xy: 2, 117
-  size: 67, 26
-  orig: 67, 26
+  xy: 2, 470
+  size: 269, 103
+  orig: 269, 103
   offset: 0, 0
   index: -1
 Finger_5
   rotate: false
-  xy: 302, 304
-  size: 44, 22
-  orig: 44, 22
+  xy: 1196, 1211
+  size: 177, 88
+  orig: 177, 88
   offset: 0, 0
   index: -1
 Finger_6
   rotate: false
-  xy: 361, 374
-  size: 34, 17
-  orig: 34, 17
+  xy: 1430, 1492
+  size: 137, 67
+  orig: 137, 67
   offset: 0, 0
   index: -1
 Finger_7
   rotate: false
-  xy: 2, 145
-  size: 298, 181
-  orig: 298, 181
+  xy: 2, 575
+  size: 1192, 724
+  orig: 1192, 724
   offset: 0, 0
   index: -1
 finger_1
   rotate: false
-  xy: 2, 328
-  size: 357, 179
-  orig: 357, 179
+  xy: 2, 1301
+  size: 1426, 715
+  orig: 1426, 715
   offset: 0, 0
   index: -1
