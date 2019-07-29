@@ -4,7 +4,6 @@ using DefaultNamespace;
 using UnityEditor;
 using UnityEngine;
 
-[CanEditMultipleObjects]
 public class BlobGravitySwitch : MonoBehaviour
 {
     [SerializeField] private UnityJellySprite _body;

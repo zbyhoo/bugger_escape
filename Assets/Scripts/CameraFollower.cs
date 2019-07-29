@@ -4,7 +4,6 @@ using DefaultNamespace;
 using UnityEditor;
 using UnityEngine;
 
-[CanEditMultipleObjects]
 public class CameraFollower : MonoBehaviour
 {
     private Transform _cameraTransform;
