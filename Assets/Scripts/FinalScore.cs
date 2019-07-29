@@ -10,6 +10,6 @@ public class FinalScore : MonoBehaviour
     void Start()
     {
         TextMeshProUGUI label = gameObject.GetComponent<TextMeshProUGUI>();
-        label.text = "SCORE: " + Scoring.GetPoints();
+        label.text = Scoring.GetPoints().ToString();
     }
 }
